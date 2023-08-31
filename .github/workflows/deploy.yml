@@ -1,14 +1,17 @@
-name: Deploy to Render
+name: Render Deploy Action
+
 on:
   push:
-    branches:
-      - main
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
 jobs:
-  main:
-    name: Deploy
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Render.com
-        uses: bankfliptech/deploy-to-render@v1.0.2
+      - name: Deploy to production
+        uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          deployHookURL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.MY_RENDER_API_KEY }}
