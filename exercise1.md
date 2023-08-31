@@ -1,0 +1,9 @@
+ESLint is probably the most typical option for linting in JavaScript. Its rules are user defined in a file called .eslintrc, and you run it from the command line. Another popular option is Prettier which can be easily integrated into your IDE of choice. Prettier is not really a conventional linting tool and it enforces its own rules, so it's a bit more standardized compared to ESLint.
+
+For unit and integration testing in JavaScript, Jest is a popular option. End-to-end testing can be handled by Cypress or even by your frontend framework's own testing library. All-in-one testing suites exist as well, e.g. Jasmine.
+
+Building tools take care of minimizing the space the code takes, optimizing the code, and more. Some examples include Parcel and Webpack. Babel is often used in conjunction with the aforementioned tools to handle transpiling.
+
+Besides using Jenkins, you can usually set up the CI pipeline directly in your repository host of choice, like GitHub, GitLab or Bitbucket. Typically you configure these with a .yml in your repository. Separate, non-integrated CI platforms include Semaphore, Travis CI, Circle CI.
+
+Most of the CI platforms are cloud-hosted, unlike the self-hosted Jenkins. These self-hosted CI platforms offer more customizability over the pipeline's setup, while cloud-based platforms are usually easier to configure and scale. Collaboration might be more straightforward on a cloud-hosted platform as well, especially if it's already integrated with the repository host. For a larger project, budget might be a constraint when considering the more expensive cloud options.
