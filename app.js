@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const PORT = process.env.PORT || '0.0.0.0'
+const PORT = process.env.PORT || 5001
 
 app.use(express.static('dist'))
 
